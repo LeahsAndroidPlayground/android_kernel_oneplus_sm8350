@@ -185,15 +185,11 @@ EXPORT_SYMBOL(vfs_statx_fd);
  *
  * 0 will be returned on success, and a -ve error code if unsuccessful.
  */
-<<<<<<< HEAD
 #ifdef CONFIG_KSU
 __attribute__((hot)) 
 extern int ksu_handle_stat(int *dfd, const char __user **filename_user,
 				int *flags);
 #endif
-=======
-
->>>>>>> ceaab7eb7183 (Re-Patch Kernel with latest susfs patch)
 int vfs_statx(int dfd, const char __user *filename, int flags,
 	      struct kstat *stat, u32 request_mask)
 {
